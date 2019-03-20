@@ -1,0 +1,17 @@
+# -*- coding: cp936 -*-
+import pygame,time
+ 
+pygame.init()
+# pygame.mixer.init() 
+ 
+print("≤•∑≈“Ù¿÷2")
+track1=pygame.mixer.music.load("F:/CloudMusic/LoveStory.mp3")
+print(track1)
+ret = pygame.mixer.music.play()
+print(ret)
+time.sleep(10)
+pygame.mixer.music.stop()
+ 
+# print("≤•∑≈“Ù¿÷3")
+# track2=pygame.mixer.Sound("F:/CloudMusic/LoveStory.mp3")
+# print(track2)
