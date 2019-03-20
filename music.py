@@ -6,7 +6,6 @@ from tkinter.filedialog import askdirectory
 import pygame
 from mutagen.id3 import ID3
 from tkinter import *
-import tkMessageBox
 
 
 
@@ -186,24 +185,24 @@ framedown.pack()
 openbutton = Button(framedown,text="open")
 openbutton.pack(side=LEFT)
 
-mutebutton = Button(framedown,text=u"\U0001F507")
+mutebutton = Button(framedown,text=u"MUTE")
 mutebutton.pack(side=LEFT)
 
-previousbutton = Button(framedown,text="◄◄")
+previousbutton = Button(framedown,text="Previous")
 previousbutton.pack(side=LEFT)
 
 
-playbutton = Button(framedown,text="►")
+playbutton = Button(framedown,text="Play")
 playbutton.pack(side=LEFT)
 
-stopbutton = Button(framedown,text="■")
+stopbutton = Button(framedown,text="Stop")
 stopbutton.pack(side=LEFT)
 
-nextbutton = Button(framedown,text="►►")
+nextbutton = Button(framedown,text="Next")
 nextbutton.pack(side=LEFT)
 
 
-pausebutton = Button(framedown,text="►/║║")
+pausebutton = Button(framedown,text="Pause")
 pausebutton.pack(side=LEFT)
 
 
