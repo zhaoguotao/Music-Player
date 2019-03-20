@@ -226,7 +226,7 @@ def Callback_Next():
       
 def Callback_VolumeMute():
     global CurrVol
-    if app.getButtonBg("Mute") == "SystemButtonFace":#no mute
+    if app.getButtonBg("Mute") == "gray":#no mute
         try:
             CurrVol = app.getScale("Vol:")
             app.setScale("Vol:", 0,callFunction=False)
@@ -240,7 +240,7 @@ def Callback_VolumeMute():
             app.setScale("Vol:", CurrVol,callFunction=False)
             vol = float(CurrVol)/100
             pygame.mixer.music.set_volume(vol)
-            app.setButtonBg("Mute", "SystemButtonFace")
+            app.setButtonBg("Mute", "gray")
             logging.info("Execute cmd: volume set: %f"%(vol))
         except Exception as e:
             logging.error(e)
@@ -255,7 +255,7 @@ def Callback_VolumeCtrl():
         if vol == 0:
             app.setButtonBg("Mute", "red")
         else:
-            app.setButtonBg("Mute", "SystemButtonFace")
+            app.setButtonBg("Mute", "gray")
         logging.info("Execute cmd: volume set: %f"%(vol))
     except Exception as e:
         logging.error(e)
@@ -314,6 +314,7 @@ def GUI_LabelFrame_Music():
     for i in bnt_title_list:
         app.setButtonWidth(i, 10)
         app.setButtonHeight(i,2)
+        app.setButtonBg(i, "gray")
 #         app.setButtonTooltip(i, "help")
         
     app.addLabel("L_song", "current song name",0,1)
@@ -407,7 +408,7 @@ if __name__ == '__main__':
     app.setSize("940x488")
     app.setFont(size=10, family="Verdana", slant="roman")
     try:
-        app.setIcon("pymusic.ico")
+        app.setIcon("/home/pi/garrett/Music-Player-master/pymusic.ico")
     except Exception as e:
         logging.error(e)
         pass
